@@ -1,0 +1,19 @@
+* {
+    background-color: rgb(32, 32, 30);
+
+}
+.headerContent {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#selectors{
+    display: flex;
+    background-color: rgba(116, 109, 109, 0.4);
+    box-shadow: 1px 1px 5px #000;
+    padding: 1% 5%;
+    width: 800px;
+    margin: 20px auto;
+    height: 25px;
+  }
