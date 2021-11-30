@@ -1,104 +1,98 @@
-
 .headerContent {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#selectors{
-    display: flex;
-    background-color: rgba(48, 32, 32, 0.4);
-    box-shadow: 1px 1px 5px #000;
-    padding: 1% 5%;
-    width: 800px;
-    margin: 20px auto;
-    height: 25px;
-  }
-
+#selectors {
+  display: flex;
+  background-color: rgba(48, 32, 32, 0.4);
+  box-shadow: 1px 1px 5px #000;
+  padding: 1% 5%;
+  width: 800px;
+  margin: 20px auto;
+  height: 25px;
+}
 
 .conteiner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 .pkm-card {
-    height: 7.5rem;
-    width: 7rem;
-    padding: 3rem;
-    border-radius: 20px;
-    background-color: rgb(221, 207, 207);
-    text-align: center;
-    font-family: "Roboto";
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: 900;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem;
+  height: 7.5rem;
+  width: 7rem;
+  padding: 3rem;
+  border-radius: 20px;
+  background-color: rgb(221, 207, 207);
+  text-align: center;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
 }
 
 .pkm-card:hover {
-   transform: scale(1.1);
-   box-shadow: 1px 2px 15px 4px #a57b7b;
+  transform: scale(1.1);
+  box-shadow: 1px 2px 15px 4px #a57b7b;
 }
 
 .pkm-images {
-    height: 60%;
-    width: 60%;
+  height: 60%;
+  width: 60%;
 }
 
+.modalBackground {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 102vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(22, 20, 20, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: visibility 0s, opacity 0.5s;
+}
 
-.modalBackground{
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    width: 100%;
-    height: 102vh;
-    top: 0;
-    left: 0;
-    background-color: rgba(180, 23, 23, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: visibility 0s, opacity 0.5s;
-  
-  }
-  
-  
-  .modal{
-    border-radius: 20px;
-    visibility: hidden;
-    opacity: 0;
-  }
-  .modalContent{
-   
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    display: flex;
-    border-radius: 20px 20px 20px 20px;
-    width: 85%;
-    max-width: 850px;
-    margin: 0 10%;
-  }
-  .modalContent p{
-    color: white;
-    text-align: center;
-    margin-right: 5%;
-  }
-  .modifications{
-    margin-top: 18%;
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: rgba(0,0,0,0.3);
-    border-radius: 20px;
-    margin-right: 24%;
-    margin-left: 30%;
-    margin-bottom: 20px;
-  }
+.modal {
+  border-radius: 20px;
+  visibility: hidden;
+  opacity: 0;
+}
+.modalContent {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  border-radius: 20px 20px 20px 20px;
+  width: 85%;
+  max-width: 850px;
+  margin: 0 10%;
+}
+.modalContent p {
+  color: white;
+  text-align: center;
+  margin-right: 5%;
+}
+.modifications {
+  margin-top: 18%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  margin-right: 24%;
+  margin-left: 30%;
+  margin-bottom: 20px;
+}

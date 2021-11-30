@@ -24,6 +24,7 @@ function pokecard(pokemon) {
   <div class="pkm-card">${pokemon.name}
   <img class="pkm-images" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png"/>
   
+  
   </div>
     `;
   containCars.addEventListener('click', () => {
