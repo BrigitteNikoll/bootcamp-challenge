@@ -6,12 +6,20 @@
 }
 #selectors {
   display: flex;
-  background-color: rgba(48, 32, 32, 0.4);
-  box-shadow: 1px 1px 5px #000;
+  /*  background-color: rgba(48, 32, 32, 0.4);
+  box-shadow: 1px 1px 5px #000; */
   padding: 1% 5%;
   width: 800px;
   margin: 20px auto;
   height: 25px;
+}
+
+.searchPokemon {
+  width: 100%;
+  border: 1px solid rgb(196, 196, 196);
+  padding: 20px 30px;
+  border-radius: 5px;
+  font-size: 15px;
 }
 
 .conteiner {
@@ -23,16 +31,15 @@
   gap: 2rem;
 }
 .pkm-card {
-  height: 7.5rem;
-  width: 7rem;
-  padding: 3rem;
+  width: 197px;
+  height: 182px;
   border-radius: 20px;
   background-color: rgb(221, 207, 207);
   text-align: center;
   font-family: "Roboto";
   text-transform: uppercase;
   font-size: 1.2rem;
-  font-weight: 900;
+  font-weight: 200;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,4 +102,84 @@
   margin-right: 24%;
   margin-left: 30%;
   margin-bottom: 20px;
+}
+
+/*----Maquetación sección filter*/
+main .filter {
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1100px;
+}
+.sectionS {
+  padding-top: 50px;
+}
+
+.filter header {
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 20px;
+}
+main .filter,
+main .body-filter,
+.body-card-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.body-card-filter {
+  justify-content: center;
+}
+.filter .search-flex {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.filter .search-flex > input {
+  width: 100%;
+}
+.filter .search-flex > input,
+.filter .flex-filter {
+  border: 1px solid rgb(196, 196, 196);
+  padding: 7px 30px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: "Roboto";
+}
+.filter .search-flex .search {
+  position: absolute;
+  padding: 0px 2px;
+  width: 60px;
+  height: 33px;
+  top: 0;
+  right: 0;
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  background-color: #73d677; /*rgb(44, 41, 118)*/
+  color: rgb(238, 238, 238);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter .flex-filter {
+  width: 49%;
+  margin-bottom: 15px;
+  color: rgb(148, 147, 147);
+}
+/*----Maquetación sección filter*/
+
+/* MODAL */
+.pkm-modal {
+  width: 599px;
+  height: 530px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }

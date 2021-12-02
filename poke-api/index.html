@@ -11,22 +11,62 @@
     <header>
       <div class="headerContent">
         <div class="logo">
-          <img src="imgs/poke.png" alt="logo" width="200" />
+          <img src="imgs/poke.png" alt="logo" width="500" />
         </div>
       </div>
     </header>
 
     <main>
       <section id="page">
-        <section id="selectors">This will be a navbar</section>
+        <section class="filter sectionS">
+          <div class="search-flex">
+            <input
+              type="text"
+              class=""
+              placeholder="Search Pokemon"
+              id="search"
+            />
+            <button class="search" disabled>
+              <span> Search </span>
+            </button>
+          </div>
+
+          <select class="flex-filter" name="ordenar" id="orderAlpha">
+            <option value="0" selected disabled>Order</option>
+            <option value="1">A-Z</option>
+            <option value="2">Z-A</option>
+          </select>
+          <select class="flex-filter" name="ordenar" id="selectType">
+            <option value="0" selected disabled>By type</option>
+            <option value="normal">Normal</option>
+            <option value="electric">Electric</option>
+            <option value="fighting">Fighting</option>
+            <option value="flying">Flying</option>
+            <option value="poison">Poison</option>
+            <option value="ground">Ground</option>
+            <option value="rock">Rock</option>
+            <option value="bug">Bug</option>
+            <option value="ghost">Ghost</option>
+            <option value="steel">Steel</option>
+            <option value="fire">Fire</option>
+            <option value="water">Water</option>
+            <option value="grass">Grass</option>
+            <option value="psychic">Psychic</option>
+            <option value="ice">Ice</option>
+            <option value="dragon">Dragon</option>
+            <option value="dark">Dark</option>
+            <option value="fairy">Fairy</option>
+          </select>
+        </section>
         <div class="conteiner" id="container"></div>
+
         <div class="modalBackground">
           <div class="modal"></div>
           <button id="close">x</button>
         </div>
       </section>
     </main>
-   
+
     <script src="app.js"></script>
   </body>
 </html>
