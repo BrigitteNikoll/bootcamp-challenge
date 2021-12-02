@@ -1,0 +1,20 @@
+.mainBar nav {
+    height: 130%;
+    font-size: 25px;
+}
+.mainBar ul {
+    height: 75%;
+    display: flex;
+}
+.mainBar ul li {
+    height: 100%;
+    margin: 0px 60px;
+    display: flex;
+    align-items: center;
+}
+.mainBar ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-left: 2px solid #937341;
+    padding-left: 40px;
+}
