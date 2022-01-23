@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 function UseStateExplame() {
-  const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState(0);
+
   function more() {
     setCounter(counter + 1);
   }
