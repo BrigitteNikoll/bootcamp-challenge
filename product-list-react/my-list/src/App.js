@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './App.css'
 import productsMock from "./products.json";
+import Product from "./components/Product";
 
 const filterAndSort = (products, color) => {
   return {
@@ -28,16 +29,7 @@ const filterAndSort = (products, color) => {
   };
 };
 
-const Product = ({product :{name, image, price}}) => {
 
-  return (
-    <div className="product">
-            <p className="product__image">{image}</p>
-            <p>${price}</p>
-            <p>{name.toUpperCase()}</p>
-          </div>
-  )
-}
 
 const App = () => {
   // hook utilizado useState
