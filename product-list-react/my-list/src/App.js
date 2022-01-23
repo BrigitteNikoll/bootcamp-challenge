@@ -31,7 +31,7 @@ const filterAndSort = (products, color) => {
 const Product = ({product :{name, image, price}}) => {
 
   return (
-    <div className="product" key={name.replace(" ", "")}>
+    <div className="product">
             <p className="product__image">{image}</p>
             <p>${price}</p>
             <p>{name.toUpperCase()}</p>
