@@ -1,6 +1,4 @@
-
-import './App.css';
-
+/* Aquí irá el routeo */
 function App() {
   return (
     <div className="App">
