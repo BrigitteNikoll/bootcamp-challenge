@@ -2,7 +2,7 @@ import { useState } from "react";
 import './App.css'
 import productsMock from "./products.json";
 
-const filterAndSort = products => {
+const filterAndSort = (products, color) => {
   return {
     menorAMayor() {
       return [...products].sort((a, b) => a.price - b.price);
@@ -15,13 +15,11 @@ const filterAndSort = products => {
       return productsMock;
     },
     porColor() {
-      const select = document.getElementById('color');
-      const { value: color } = select.options[select.selectedIndex];
-  
+
       if (color === 'all') {
         return this.limpiar();
       } else {
-        const filterByColor = products.filter(
+        const filterByColor = productsMock.filter(
           product => product.color === color
         );
         return filterByColor;
@@ -34,8 +32,8 @@ const App = () => {
   // hook utilizado useState
   const [productes, setProducts] = useState(productsMock);
 
-  const filterOrSort = type => {
-    const filteredProducts = filterAndSort(productes)[type]();
+  const filterOrSort = (type, color) => {
+    const filteredProducts = filterAndSort(productes, color)[type]();
     setProducts(filteredProducts);
   };
 
