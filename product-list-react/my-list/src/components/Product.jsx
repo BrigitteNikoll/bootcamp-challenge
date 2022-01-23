@@ -1,6 +1,6 @@
 const Product = ({ product: { name, image, price } }) => {
     return (
-      <div className="product">
+      <div className="product"  key={name.replace(" ", "")}>
         <p className="product__image">{image}</p>
         <p>${price}</p>
         <p>{name.toUpperCase()}</p>

@@ -28,6 +28,17 @@ const filterAndSort = (products, color) => {
   };
 };
 
+const Product = ({product :{name, image, price}}) => {
+
+  return (
+    <div className="product" key={name.replace(" ", "")}>
+            <p className="product__image">{image}</p>
+            <p>${price}</p>
+            <p>{name.toUpperCase()}</p>
+          </div>
+  )
+}
+
 const App = () => {
   // hook utilizado useState
   const [productes, setProducts] = useState(productsMock);
@@ -74,12 +85,9 @@ const App = () => {
       </div>
 
       <div className="productsContainer">
-        {productes.map(({ name, image, price }) => (
-          <div className="product" key={name.replace(" ", "")}>
-            <p className="product__image">{image}</p>
-            <p>${price}</p>
-            <p>{name.toUpperCase()}</p>
-          </div>
+        {productes.map((product) => (
+          <Product product={product} key={product.name.replace(" ", "")}/>
+          
         ))}
       </div>
     </div>
