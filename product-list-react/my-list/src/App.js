@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './App.css'
+import './App.scss'
 import productsMock from "./products.json";
 import Product from "./components/Product";
 
