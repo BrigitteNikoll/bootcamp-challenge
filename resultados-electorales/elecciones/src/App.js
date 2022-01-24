@@ -1,23 +1,14 @@
-/* Aquí irá el routeo */
+import { useState } from 'react';
+import { Elecciones } from './pages/Elecciones';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [candidatos, setCandidatos] = useState([
+    { nombre: 'Hugo', votos: 0 },
+    { nombre: 'Paco', votos: 0 },
+    { nombre: 'Luis', votos: 0 },
+  ]);
+
+  return <Elecciones candidatos={candidatos} setCandidatos={setCandidatos} />;
 }
 
 export default App;
