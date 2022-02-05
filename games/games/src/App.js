@@ -12,16 +12,24 @@ const App = () => {
     setText(e.target.value);
   };
 
-/*   const TransformToEmojipedi = (text) => {
+  /*   const TransformToEmojipedi = (text) => {
     const newText = text.split(" ").map((word) => {
       return emojipedia[word] ?? word;
     });
     return newText.join(" ");
   }; */
 
-  const TransformToEmojipedi = text => {
-    return text.split(' ').map(word => emojipedia[word] ?? word).join(' ')
+  const TransformToEmojipedi = (text) => {
+    return text
+      .split(" ")
+      .map((word) => emojipedia[word] ?? word)
+      .join(" ");
   };
+
+  const color = "purple";
+  //OJO: Si tenemos un objeto cuyo key y valor tienen el mismo nombre, solo se escribe uno
+  const textStyle = { color: color };
+  /*  const textStyle = { color}; */
 
   return (
     <div className="App">
@@ -31,7 +39,7 @@ const App = () => {
         rows="10"
         onChange={onTextAreaChange}
       ></textarea>
-      <p>{TransformToEmojipedi(text)}</p>
+      <p style={textStyle}>{TransformToEmojipedi(text)}</p>
     </div>
   );
 };
