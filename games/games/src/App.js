@@ -28,6 +28,7 @@ const App = () => {
   return (
     <div className="App">
       <textarea
+        value={text}
         textarea
         cols="30"
         rows="10"
