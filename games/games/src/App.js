@@ -7,17 +7,12 @@ const App = () => {
   };
 
   const [text, setText] = useState("");
+  const [color, setColor] = useState("purple");
+  const textStyle = { color };
 
   const onTextAreaChange = (e) => {
     setText(e.target.value);
   };
-
-  /*   const TransformToEmojipedi = (text) => {
-    const newText = text.split(" ").map((word) => {
-      return emojipedia[word] ?? word;
-    });
-    return newText.join(" ");
-  }; */
 
   const TransformToEmojipedi = (text) => {
     return text
@@ -26,10 +21,9 @@ const App = () => {
       .join(" ");
   };
 
-  const color = "purple";
-  //OJO: Si tenemos un objeto cuyo key y valor tienen el mismo nombre, solo se escribe uno
-  const textStyle = { color: color };
-  /*  const textStyle = { color}; */
+  const changeColor = (e) => {
+    setColor(e.target.value);
+  };
 
   return (
     <div className="App">
@@ -39,9 +33,14 @@ const App = () => {
         rows="10"
         onChange={onTextAreaChange}
       ></textarea>
+      <input
+        placeholder="Escribe un color aquí"
+        onChange={changeColor}
+        className="input_style"
+      />
       <p style={textStyle}>{TransformToEmojipedi(text)}</p>
     </div>
   );
 };
-//Se creo un método que se ingresa en el text area y lo transformo. Como es un string, lo conveirto en array y lo recorro para encontrar una coincidencia. Si no está en el diccionario, retornará los elementos de word
+
 export default App;

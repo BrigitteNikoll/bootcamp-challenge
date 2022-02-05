@@ -9,9 +9,20 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 15rem;
+  background-color: bisque;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.input_style {
+  margin-top: 20px;
 }
