@@ -11,7 +11,7 @@ const GitGenerator = () => {
       params: {
         api_key: process.env.REACT_APP_GIPHY_KEY_NAME,
         q: query,
-        limit: 10,
+        limit: 50,
       },
     });
     console.log("query", query);

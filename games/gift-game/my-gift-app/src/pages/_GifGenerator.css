@@ -10,3 +10,9 @@
     justify-content: center;
     margin-top: 2rem;
 }
+
+.gifs {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
