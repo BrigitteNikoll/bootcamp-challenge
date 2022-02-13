@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import './_Nav.css'
 
-function nav() {
+const Nav = () => {
   return (
     <div >
       <Link to="/paint" className="nav__link">Paint</Link>
@@ -12,4 +12,4 @@ function nav() {
   );
 }
 
-export default nav;
+export default Nav;
