@@ -1,4 +1,17 @@
-.shapes {
-    display: flex;
-    justify-content: center;
-  }
+.colorBox {
+  width: 20px;
+  height: 20px;
+  margin: 0, 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.black {
+  background-color: black;
+}
