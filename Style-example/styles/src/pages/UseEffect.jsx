@@ -1,8 +1,8 @@
 import React from 'react'
 
-function UseEffect() {
+const UseEffect = () => {
   return (
-    <div>useEffect</div>
+    <h1>Ejmplos usando useEffect</h1>
   )
 }
 
