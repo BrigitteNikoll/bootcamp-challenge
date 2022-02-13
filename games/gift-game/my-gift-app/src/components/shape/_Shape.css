@@ -1,0 +1,28 @@
+.shape {
+  margin: 20px;
+  cursor: pointer;
+  border: solid 1px;
+  background-color: rgb(126, 177, 59);
+}
+
+.rectangle {
+  width: 200px;
+  height: 100px;
+}
+
+.squre {
+  height: 100px;
+  width: 100px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.parallelogram {
+  width: 150px;
+  height: 100px;
+  transform: skew(15deg);
+}
