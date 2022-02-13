@@ -4,6 +4,7 @@ import UseEffect from "./pages/UseEffect"
 import Home from "./pages/Home.jsx";
 import Nav from "./components/nav/Nav.jsx"
 import "./App.css";
+import UseEffectWindows from "./pages/UseEffectWindows.jsx";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/usestate" element={<UseState />} />
           <Route path="/useeffect" element={<UseEffect />} />
+          <Route path="/useeffectwin" element={<UseEffectWindows />} />
           <Route path="*" element={<p>404</p>} />
         </Routes>
       </div>
