@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import "./_GifGenerator.css";
 
@@ -18,6 +18,20 @@ const GitGenerator = () => {
     console.log("response", response.data.data);
     setgifs(response.data.data);
   };
+  const handleTrendingGifs = async () => {
+    const response = await axios.get("https://api.giphy.com/v1/gifs/trending", {
+      params: {
+        api_key: process.env.REACT_APP_GIPHY_KEY_NAME,
+        limit: 50,
+      },
+    });
+    setgifs(response.data.data);
+  };
+
+  useEffect(() => {
+    console.log("UseEffect ejecutándose");
+    handleTrendingGifs();
+  }, []);
 
   return (
     <div className="gifGenerator">
