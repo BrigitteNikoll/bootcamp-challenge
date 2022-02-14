@@ -7,6 +7,7 @@ const Nav = () => {
       <Link to="/usestate">usestate</Link>
       <Link to="/useeffect">useeffect </Link>
       <Link to="/useeffectwin">useeffectWindows </Link>
+      <Link to="/usereducer">useReducer </Link>
     </div>
   );
 };
