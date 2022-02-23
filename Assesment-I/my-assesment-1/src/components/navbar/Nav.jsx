@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './_Nav.scss';
 
 const Nav = () => {
   return (

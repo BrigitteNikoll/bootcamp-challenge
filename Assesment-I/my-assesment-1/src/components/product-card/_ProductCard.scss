@@ -1,0 +1,49 @@
+.card {
+    @at-root &__container {
+      display: flex;
+      flex-direction: column;
+      border: 0.5px solid grey;
+      border-radius: 0.5rem;
+      width: 27rem;
+      img {
+        height: 9rem;
+      }
+      background-color: white;
+    }
+  
+    @at-root &__figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem 1rem 0rem 1rem;
+    }
+  
+ /*    @at-root &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0rem 1rem 1rem 1rem;
+    } */
+  
+    @at-root &__button {
+      background-color: rgb(0, 0, 0);
+      color: white;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      margin: 1rem 1rem 1rem 1rem;
+      width: 60%;
+    }
+    @at-root &__time {
+/*       background-color: rgb(214, 184, 184);
+     
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      margin: 1rem 1rem 1rem 1rem;
+      width: 60%; */
+      color: rgba(37, 35, 35, 0.623);
+      font-weight: 400;
+    }
+  }
+  
