@@ -1,76 +1,95 @@
-.product {
-    @at-root &__main {
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
+* {
+  box-sizing: border-box;
+
+}
+
+.cont {
+
+  .card {
+    width: 650px;
+    // height: 375px;
+    position: absolute;
+    background: white;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+      0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.3s;
+
+    .photo {
+      padding: 30px;
+      width: 45%;
       text-align: center;
-    }
-  
-    @at-root &__container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      float: left;
+
       img {
-        height: 10rem;
+        max-height: 120px;
       }
     }
-  
-    @at-root &__detail {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
+    .description {
+      padding: 30px;
+      float: left;
+      width: 55%;
+      border-left: 2px solid #efefef;
+
+      h1 {
+        color: #515151;
+        font-weight: 300;
+        padding-top: 15px;
+        margin: 0;
+        font-size: 30px;
+        font-weight: 400;
+      }
+
+      h2 {
+        color: #515151;
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+
+      h4 {
+        margin: 0.2rem;
+        color: #c59292;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 12px;
+      }
+
       p {
+        font-size: 15px;
+        line-height: 20px;
+        color: #727272;
+        padding: 10px 0;
         margin: 0;
       }
-    }
-  
-    @at-root &__price {
-      font-size: 4rem;
-      color: #b81a1a;
-    }
-  
-    @at-root &__category {
-      font-weight: 100;
-      font-style: italic;
-      font-size: 2rem;
-    }
-  
-    @at-root &__footer {
-      display: flex;
-      flex-direction: column;
-      row-gap: 1rem;
-      margin-bottom: 1rem;
-    }
-  
-    @at-root &__description {
-      text-align: justify;
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .product {
-      @at-root &__container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        img {
-          height: 15rem;
+
+      button {
+        outline: 0;
+        border: 0;
+        background: none;
+        border: 1px solid #d9d9d9;
+        padding: 8px 0px;
+        margin-bottom: 30px;
+        color: #515151;
+        text-transform: uppercase;
+        width: 125px;
+        font-family: inherit;
+        margin-right: 5px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+
+        &:hover {
+          // background: darken(white, 2%);
+          border: 1px solid #c59292;
+          color: #c59292;
+          cursor: pointer;
         }
       }
-      @at-root &__footer {
-        row-gap: 2rem;
-        margin-bottom: 0rem;
-      }
     }
   }
-  
-  @media (min-width: 576px) {
-    .product {
-      @at-root &__detail {
-        flex-direction: row;
-        justify-content: space-around;
-      }
-  
-      @at-root &__price {
-        font-size: 5rem;
-      }
-    }
-  }
-  
+}
