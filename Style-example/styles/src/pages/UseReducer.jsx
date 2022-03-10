@@ -1,22 +1,29 @@
-import { useState, useReducer } from "react";
+import {  useReducer } from "react";
 
 //2. reducer como función recibe un estado y una acción. Me devuelve el estado actualizado
 function reducer(state, action) {
-  return { count: state.count + 1 };
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    case "decrement":
+      return { count: state.count + 1 };
+    default:
+      return state;
+  }
 }
 
 function UseReducerComponent() {
-  const [count, setCount] = useState(0);
-
   // 1. Se le pasa una funcion llamada reducer y un objeto (puede ser un arreglo arryaX: [] o variableY: "Hola")
   const [state, dispatch] = useReducer(reducer, { count: 0 });
 
   //3. Se llama a dispatch
   function increment() {
-    dispatch();
+    dispatch({type: "increment"});
   }
 
-  function decrement() {}
+  function decrement() {
+    dispatch({type: "decrement"});
+  }
 
   return (
     <div>

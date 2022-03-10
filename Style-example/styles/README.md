@@ -17,3 +17,26 @@ function reducer(state, action) {
 
 A la función increment se le pasa el dispatch()
 y para imprimirlo se usa {state.count}
+
+Como queremos incrementar y decrementar, es mejor poner un switch en el reducer:
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    case "decrement":
+      return { count: state.count + 1 };
+    default:
+      return state;
+  }
+}
+
+Las funciones de increment y decrement deben tener el dispatch que tendrá como parámetro un objeto:
+
+  function increment() {
+    dispatch({type: "increment"});
+  }
+
+  function decrement() {
+    dispatch({type: "decrement"});
+  }
