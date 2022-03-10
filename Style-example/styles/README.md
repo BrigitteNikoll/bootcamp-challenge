@@ -40,3 +40,17 @@ Las funciones de increment y decrement deben tener el dispatch que tendrá como 
   function decrement() {
     dispatch({type: "decrement"});
   }
+
+  Definición de ACCIÓN
+  Por lo general tienen su propio archivo y son variables gloables
+
+  const ACTIONS = {
+  INCREMENT: 'increment',
+  DECREMENT: 'decrement'
+}
+
+Una vez definido este objeto ACTIONS, podemos cambiar cada case del switch a  ACTIONS.INCREMENT, y también en las funciones de increment o decrement
+
+  function increment() {
+    dispatch({type: ACTIONS.INCREMENT});
+  }
