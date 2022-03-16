@@ -1,11 +1,16 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import Formulario from "../components/formularios";
 import ListaTareas from "../components/listaTareas";
 import tareas from "../utils/tareas";
 
+function reducer(state, action) {
+    
+}
+
 export default function Principal() {
   // Estados del componente
-  const [listaTareas, setListaTareas] = useState([]);
+/*   const [listaTareas, setListaTareas] = useState([]); */
+  const [state, dispatch] = useReducer(reducer, []);
   const [editable, setEditable] = useState(null);
 
   // Ciclo de vida con hook useEffect
