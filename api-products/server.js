@@ -1,6 +1,10 @@
 import express from "express";
 import mongosse from "mongosse";
 
+/* MONGOSSE */
+
+mongoose.connect('mongodb+srv://brigitte:<password>@clase-02-02.u6sw6.mongodb.net/test');
+
 /* EXPRESS */
 const app = express();
 
