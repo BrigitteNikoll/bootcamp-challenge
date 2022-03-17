@@ -7,7 +7,8 @@ app.get('/', (request, response) => {
     response.send('Hola!')
 })
 app.get('/products', (request, response) => {
-    console.log("request", request)
+    /*     console.log("request", request) */
+    console.log("request", request.query)
     response.send("<h1>Products!<h1>");
 })
 
