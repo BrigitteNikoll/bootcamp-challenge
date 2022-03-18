@@ -1,9 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 
-import { productCtrl } from './API/controllers/index.js'
+import { productCtrl } from './api/controllers/index.js'
 
-const { getAllProducts} = productCtrl
+const { getAllProducts, getOneProduct } = productCtrl;
 /* MONGOSSE */
 
 //Connect to db
@@ -27,7 +27,8 @@ const app = express();
 app.get("/", (request, response) => {
   response.send("API PRODUCTS");
 });
-app.get("/products", getAllProducts);
+app.get("/api/products", getAllProducts);
+app.get("/api/products/:id/:color", getOneProduct);
 
 
 // Launch server in port 5000
