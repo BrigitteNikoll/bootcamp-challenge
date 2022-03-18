@@ -19,6 +19,9 @@ mongoose.connection.on("error", function (e) {
 /* EXPRESS */
 const app = express();
 
+//Creación de Middleware
+app.use(express.json())
+
 // Routes
 app.get("/", (request, response) => {
   response.send("API PRODUCTS");
