@@ -28,7 +28,7 @@ app.get("/", (request, response) => {
   response.send("API PRODUCTS");
 });
 app.get("/api/products", getAllProducts);
-app.get("/api/products/:id/:color", getOneProduct);
+app.get("/api/products/:id", getOneProduct);
 
 
 // Launch server in port 5000
