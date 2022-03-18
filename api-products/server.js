@@ -1,17 +1,10 @@
 import express from "express";
 import mongoose from "mongoose";
 
+import { productCtrl } from './API/controllers/index.js'
+
+const { getAllProducts} = productCtrl
 /* MONGOSSE */
-
-//Schema para productos
-const schemaProducts = {
-  ref: String,
-  name: String,
-  description: String,
-};
-
-//Product model
-const Product = mongoose.model("Product", schemaProducts, "product");
 
 //Connect to db
 await mongoose.connect(
@@ -25,11 +18,6 @@ mongoose.connection.on("error", function (e) {
 
 
 
-//Controller get all product
-const getAllProducts = async (request, response) => {
-  const products = await Product.find();
-  response.json(products)
-};
 
 /* EXPRESS */
 const app = express();
