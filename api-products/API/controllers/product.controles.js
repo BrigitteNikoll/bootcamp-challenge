@@ -6,8 +6,11 @@ export const getAllProducts = async (request, response) => {
   response.json(products);
 };
 export const getOneProduct = async (req, res) => {
-  console.log('getOneProduct', req.params);
+/*   console.log('getOneProduct', req.params); */
   const { id: idProduct } = req.params
   const product = await Product.findById(idProduct)
   res.json(product);
+};
+export const createProduct = async (req, res) => {
+  console.log('createProduct', req.body);
 };

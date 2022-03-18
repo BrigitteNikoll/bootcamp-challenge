@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 import { productCtrl } from './api/controllers/index.js'
 
-const { getAllProducts, getOneProduct } = productCtrl;
+const { getAllProducts, getOneProduct, createProduct } = productCtrl;
 /* MONGOSSE */
 
 //Connect to db
@@ -16,12 +16,8 @@ mongoose.connection.on("error", function (e) {
   console.log("error", e);
 });
 
-
-
-
 /* EXPRESS */
 const app = express();
-
 
 // Routes
 app.get("/", (request, response) => {
@@ -29,6 +25,7 @@ app.get("/", (request, response) => {
 });
 app.get("/api/products", getAllProducts);
 app.get("/api/products/:id", getOneProduct);
+app.post("/api/products/create", createProduct);
 
 
 // Launch server in port 5000
