@@ -5,7 +5,7 @@ const schemaProducts = {
     ref: String,
     name: String,
     description: String,
-    create_at: Date,
+    create_at: { type: Date, default: Date.now()},
     discount: Number,
     price: Number,
     active: Boolean
