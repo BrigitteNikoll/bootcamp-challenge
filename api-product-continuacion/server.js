@@ -11,7 +11,7 @@ const { getAllProducts, getOneProduct, createProduct } = productCtlr;
 
 //Connect to db
 await mongoose.connect(
-  "mongodb+srv://brigitte:root@clase-02-02.u6sw6.mongodb.net/product_db"
+/*   "mongodb+srv://brigitte:root@clase-02-02.u6sw6.mongodb.net/product_db" */
 );
 
 // Listener to connection error
