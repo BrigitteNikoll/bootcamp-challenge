@@ -44,9 +44,9 @@ export const updateProduct = async (req, res) => {
     res.status(500).send(error);
   }
 
-//Probando si esto funciona
-  
-/*   const { id: idProduct } = req.params;
+  //Probando si esto funciona
+
+  /*   const { id: idProduct } = req.params;
   const productToUpdate = req.body;
 
   console.log("productToUpdate", productToUpdate);
@@ -58,24 +58,18 @@ export const updateProduct = async (req, res) => {
   Product.updateOne(product, productToUpdate, (err, data) => {
     console.log("Callback", err, data);
   }); */
-
 };
-
 
 export const deleteProduct = async (req, res) => {
   const { id: idProduct } = req.params;
-  const productToDelete = req.body;
-  console.log("productToDelete", productToDelete);
-  const product = await Product.findById(idProduct);
-  console.log("product", product);
 
   try {
-    Product.deleteOne(product, productToDelete, (error, deletedProduct) => {
-      if (!error) {
-        res.status(200).json(deletedProduct);
-      } else res.status(500).send(error);
-    });
+    const productToDelete = await Product.findById(idProduct);
+    if (!productToDelete)
+      res.status(204).json({ error: "No product to delete" });
+    const deletedProduct = await Product.deleteOne(productToDelete);
+    if (deletedProduct) res.status(200).json(deletedProduct);
   } catch (error) {
     res.status(500).send(error);
   }
-}
+};
