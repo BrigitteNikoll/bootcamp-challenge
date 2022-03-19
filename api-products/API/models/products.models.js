@@ -8,10 +8,10 @@ const schemaProducts = {
     create_at: { type: Date, default: Date.now()},
     discount: Number,
     price: Number,
-    active: Boolean
+    active: Boolean,
   };
   
   //Product model
-const Product = mongoose.model("Product", schemaProducts, "products");
+const Product = mongoose.model("Product", schemaProducts, "product");
   
 export default Product;
