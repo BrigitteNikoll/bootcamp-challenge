@@ -1,9 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 
-import { productCtrl } from './api/controllers/index.js'
-import { productRouter } from './api/routes/index.js'
-
+import { productCtrl } from "./api/controllers/index.js";
 
 const { getAllProducts, getOneProduct, createProduct } = productCtrl;
 
@@ -16,7 +14,7 @@ await mongoose.connect(
 
 //Listener to connection error
 mongoose.connection.on("error", function (e) {
-  console.log("ERROR", e);
+  console.error("ERROR: ", e);
 });
 
 /* EXPRESS */
@@ -30,11 +28,10 @@ app.get("/", (request, response) => {
   response.send("API PRODUCTS");
 });
 
-app.use('/api', productRouter);
 
-/* app.get("/api/products", getAllProducts);
+app.get("/api/products", getAllProducts);
 app.get("/api/products/:id", getOneProduct);
-app.post("/api/products/create", createProduct); */
+app.post("/api/products/create", createProduct);
 
 
 // Launch server in port 5000

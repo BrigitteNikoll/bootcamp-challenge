@@ -1,3 +1,3 @@
-import Product from "./products.models.js";
+import Product from "./products.model.js";
 
 export { Product };

@@ -1,4 +1,4 @@
-import * as productCtrl from './product.controles.js'; 
+import * as productCtrl from './product.controller.js'; 
 export {
     productCtrl
 }
