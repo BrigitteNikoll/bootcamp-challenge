@@ -21,7 +21,19 @@ mongoose.connection.on("error", function (e) {
 const app = express();
 
 //Creación de Middleware
-app.use(express.json())
+app.use(express.json());
+
+const m1 = (req, res, next) => {
+  console.log("middleware");
+  next();
+};
+const m2 = (req, res) => {
+  console.log("middleware 2");
+  res.send("Middleware");
+};
+
+// Middleware  route
+app.get("/middleware", m1, m2);
 
 // Routes
 app.get("/", (request, response) => {
@@ -33,9 +45,7 @@ app.use("/api", productRouter);
 app.get("/api/products/:id", getOneProduct);
 app.post("/api/products/create", createProduct); */
 
-
 // Launch server in port 5000
 app.listen(5000, () => {
   console.log("Iniatialized server!");
 });
-
