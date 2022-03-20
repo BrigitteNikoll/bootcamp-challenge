@@ -15,7 +15,7 @@ export const getOneProduct = async (req, res) => {
   const { id: idProduct } = req.params;
   const product = await Product.findById(idProduct);
   res.json(product);
-  console.log(idProduct)
+  console.log(idProduct);
 };
 
 export const createProduct = async (req, res) => {
@@ -28,13 +28,29 @@ export const createProduct = async (req, res) => {
   }
 };
 
+export const findProduct = async (req, res, next) => {
+  console.log("Find Products");
+  const { id: idProduct } = req.params;
+  try {
+    const product = await Product.findById(idProduct);
+    if (product) {
+      req.data = {
+        product,
+      };
+      /*  console.log("req.data", req.data); */
+      next();
+    } else {
+      res.status(204).json({ error: "No product" });
+    }
+  } catch (e) {
+    res.status(500).json({ error: e });
+  }
+};
 
 export const updateProduct = async (req, res) => {
-  const { id: idProduct } = req.params;
   const productToUpdate = req.body;
-  console.log("productToUpdate", productToUpdate);
-  const product = await Product.findById(idProduct);
-  console.log("product", product);
+  console.log("req.data", req.data.product);
+  const { product } = req.data;
 
   try {
     Product.updateOne(product, productToUpdate, (error, updatedProduct) => {
