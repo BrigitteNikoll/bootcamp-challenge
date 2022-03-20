@@ -15,6 +15,7 @@ export const getOneProduct = async (req, res) => {
   const { id: idProduct } = req.params;
   const product = await Product.findById(idProduct);
   res.json(product);
+  console.log(idProduct)
 };
 
 export const createProduct = async (req, res) => {
@@ -26,6 +27,7 @@ export const createProduct = async (req, res) => {
     response.status(500).json({ error: e });
   }
 };
+
 
 export const updateProduct = async (req, res) => {
   const { id: idProduct } = req.params;
@@ -43,21 +45,6 @@ export const updateProduct = async (req, res) => {
   } catch (error) {
     res.status(500).send(error);
   }
-
-  //Probando si esto funciona
-
-  /*   const { id: idProduct } = req.params;
-  const productToUpdate = req.body;
-
-  console.log("productToUpdate", productToUpdate);
-
-  const product = await Product.findById(idProduct);
-
-  console.log("product", product);
-
-  Product.updateOne(product, productToUpdate, (err, data) => {
-    console.log("Callback", err, data);
-  }); */
 };
 
 export const deleteProduct = async (req, res) => {

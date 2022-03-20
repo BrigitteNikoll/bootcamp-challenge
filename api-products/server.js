@@ -23,18 +23,6 @@ const app = express();
 //Creación de Middleware
 app.use(express.json());
 
-const m1 = (req, res, next) => {
-  console.log("middleware");
-  next();
-};
-const m2 = (req, res) => {
-  console.log("middleware 2");
-  res.send("Middleware");
-};
-
-// Middleware  route
-app.get("/middleware", m1, m2);
-
 // Routes
 app.get("/", (request, response) => {
   response.send("API PRODUCTS");
